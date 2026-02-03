@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cornelius Mota | Positioning Architect</title>
+  <meta name="description" content="I help high-ticket experts become the obvious choice in their market. Positioning strategy for coaches, consultants, and service providers.">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.7;
+    }
+    
+    /* Navigation */
+    .nav {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .nav-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+    
+    .nav-cta {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      padding: 10px 20px;
+      background: #2563eb;
+      color: #fff !important;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    
+    .nav-cta:hover {
+      background: #1d4ed8;
+      color: #fff !important;
+    }
+    
+    /* Hero Section */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 100px 50px 80px;
+      text-align: center;
+    }
+    
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #2563eb;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1.25;
+      margin-bottom: 30px;
+      color: #1a1a1a;
+    }
+    
+    .hero h1 span {
+      font-style: italic;
+    }
+    
+    .hero-sub {
+      font-size: 1.15rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .btn-primary {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      padding: 16px 32px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+    
+    .btn-secondary {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      padding: 16px 32px;
+      background: #fff;
+      color: #2563eb;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border: 2px solid #2563eb;
+      transition: all 0.2s;
+    }
+    
+    .btn-secondary:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+    
+    /* Problem Section */
+    .problem-section {
+      background: #f8fafc;
+      padding: 80px 50px;
+    }
+    
+    .problem-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2563eb;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    
+    .problem-content h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+    
+    .problem-content p {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    
+    .problem-list {
+      list-style: none;
+      margin: 30px 0;
+    }
+    
+    .problem-list li {
+      font-size: 1rem;
+      color: #555;
+      padding: 12px 0;
+      padding-left: 30px;
+      position: relative;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .problem-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .problem-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+    }
+    
+    /* Services Section */
+    .services-section {
+      padding: 80px 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .services-section h2 {
+      font-size: 1.8rem;
+      font-weight: 400;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+      text-align: center;
+    }
+    
+    .services-intro {
+      font-size: 1.05rem;
+      color: #666;
+      text-align: center;
+      max-width: 550px;
+      margin: 0 auto 50px;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    
+    .service-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 40px;
+      transition: all 0.2s;
+    }
+    
+    .service-card:hover {
+      border-color: #2563eb;
+      box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+    }
+    
+    .service-card.featured {
+      border-color: #2563eb;
+      border-width: 2px;
+    }
+    
+    .service-badge {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: #2563eb;
+      color: #fff;
+      padding: 5px 12px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    
+    .service-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+    }
+    
+    .service-price {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 15px;
+    }
+    
+    .service-price span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #888;
+    }
+    
+    .service-card p {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+    
+    .service-features {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+    
+    .service-features li {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #555;
+      padding: 6px 0;
+      padding-left: 22px;
+      position: relative;
+    }
+    
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #2563eb;
+      font-weight: 600;
+    }
+    
+    .service-link {
+      font-family: 'Inter', sans-serif;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: gap 0.2s;
+    }
+    
+    .service-link:hover {
+      gap: 12px;
+    }
+    
+    /* About Section */
+    .about-section {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 80px 50px;
+    }
+    
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 50px;
+      align-items: flex-start;
+    }
+    
+    .about-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb 0%, #6366f1 100%);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    
+    .about-text h2 {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    .about-text p {
+      font-size: 1rem;
+      color: #a0a0b0;
+      margin-bottom: 15px;
+      line-height: 1.8;
+    }
+    
+    .about-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 30px;
+    }
+    
+    .stat {
+      text-align: left;
+    }
+    
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+    
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      padding: 80px 50px;
+      text-align: center;
+      background: #f8fafc;
+    }
+    
+    .cta-section h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+    
+    .cta-section p {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 35px;
+      font-style: italic;
+    }
+    
+    /* Footer */
+    .footer {
+      padding: 40px 50px;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    
+    .footer-left {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #888;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 25px;
+    }
+    
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #888;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: #2563eb;
+    }
+    
+    /* Mobile */
+    @media (max-width: 800px) {
+      .nav {
+        padding: 15px 25px;
+      }
+      
+      .nav-links {
+        gap: 20px;
+      }
+      
+      .hero {
+        padding: 60px 25px;
+      }
+      
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero-sub {
+        font-size: 1rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .problem-section,
+      .services-section,
+      .about-section,
+      .cta-section {
+        padding: 60px 25px;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+      
+      .about-stats {
+        justify-content: flex-start;
+      }
+      
+      .stat {
+        text-align: left;
+      }
+      
+      .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        padding: 30px 25px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Cornelius Mota</a>
+    <div class="nav-links">
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="advisory.html">Advisory</a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="diagnostic.html" class="nav-cta">Work With Me</a>
+    </div>
+  </nav>
+  
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-eyebrow">Positioning Architect</div>
+    <h1>I help high-ticket experts become <span>the obvious choice</span></h1>
+    <p class="hero-sub">Stop competing on price. Fix your positioning so the right clients find you, get it instantly, and choose you over everyone else.</p>
+    <div class="hero-cta">
+      <a href="diagnostic.html" class="btn-primary">Get Your Positioning Diagnostic</a>
+      <a href="#services" class="btn-secondary">See How I Work</a>
+    </div>
+  </section>
+  
+  <!-- Problem -->
+  <section class="problem-section">
+    <div class="problem-content">
+      <div class="section-label">The Problem</div>
+      <h2>Most experts don't have a lead problem. They have a positioning problem.</h2>
+      <p>Your offer is solid. Your skills are real. But your message is muddy. So you end up:</p>
+      <ul class="problem-list">
+        <li>Competing on price with people who aren't half as good as you</li>
+        <li>Explaining what you do over and over (and watching eyes glaze over)</li>
+        <li>Attracting leads who "love your content" but never buy</li>
+        <li>Watching less skilled competitors get more traction</li>
+      </ul>
+      <p>The fix isn't more marketing. It's clearer positioning. When your ICP, offer, and messaging are aligned, you stop chasing. You start getting chosen.</p>
+    </div>
+  </section>
+  
+  <!-- Services -->
+  <section class="services-section" id="services">
+    <div class="section-label" style="text-align: center;">How I Work</div>
+    <h2>Two ways to work with me</h2>
+    <p class="services-intro">Start with a diagnostic. Add ongoing support if you need it.</p>
+    
+    <div class="services-grid">
+      <div class="service-card featured">
+        <span class="service-badge">Start Here</span>
+        <h3>Positioning Diagnostic</h3>
+        <div class="service-price">$295 <span>– $495</span></div>
+        <p>A surgical audit of your positioning, messaging, offer, and ICP.</p>
+        <ul class="service-features">
+          <li>ICP clarity analysis</li>
+          <li>Offer positioning audit</li>
+          <li>Messaging breakdown</li>
+          <li>Prioritized roadmap</li>
+          <li>Done-for-you option available</li>
+        </ul>
+        <a href="diagnostic.html" class="service-link">See full details →</a>
+      </div>
+      
+      <div class="service-card">
+        <h3>Async Advisory</h3>
+        <div class="service-price">$297 <span>– $497/mo</span></div>
+        <p>Ongoing strategic support as you implement.</p>
+        <ul class="service-features">
+          <li>Email-based Q&A</li>
+          <li>24-48 hour responses</li>
+          <li>Copy & messaging reviews</li>
+          <li>Strategic gut-checks</li>
+          <li>No calls, fully async</li>
+        </ul>
+        <a href="advisory.html" class="service-link">See full details →</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About -->
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-photo">C</div>
+      <div class="about-text">
+        <h2>Hi, I'm Cornelius.</h2>
+        <p>I spent 16 years in corporate marketing. I've seen what works at scale and what doesn't.</p>
+        <p>Six years ago, I left to build my own business. I grew it to seven figures using organic marketing and positioning principles. When that model stopped working, I didn't panic. I repositioned.</p>
+        <p>Now I help high-ticket experts do the same: fix their positioning so they stop competing on price and start getting chosen for their expertise.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <div class="stat-number">16+</div>
+            <div class="stat-label">Years in Marketing</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">7-Fig</div>
+            <div class="stat-label">Business Built</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number">6+</div>
+            <div class="stat-label">Years Solo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to become the obvious choice?</h2>
+    <p>Let's fix your positioning so the right clients stop scrolling past.</p>
+    <a href="diagnostic.html" class="btn-primary">Get Your Positioning Diagnostic</a>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-left">© 2026 Cornelius Mota. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </footer>
+  
+</body>
+</html>
