@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Async Advisory | Cornelius Mota</title>
+  <meta name="description" content="Your Async Advisory subscription is confirmed. Here's what happens next.">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="4310029f-ce21-4396-a0e5-ed6fb1a6e334"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.7;
+    }
+    
+    .nav {
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #fff;
+    }
+    
+    .nav-logo {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+    }
+    
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #555;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+    
+    .page-container {
+      max-width: 680px;
+      margin: 0 auto;
+      background: #fff;
+      min-height: 100vh;
+      box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    }
+    
+    .section {
+      padding: 45px 50px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .section:last-child {
+      border-bottom: none;
+    }
+    
+    .hero {
+      text-align: center;
+      padding: 60px 50px;
+    }
+    
+    .hero-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2563eb;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    
+    .hero h1 {
+      font-size: 2.1rem;
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
+    
+    .hero-sub {
+      font-size: 1.05rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #2563eb;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+    
+    p {
+      margin-bottom: 16px;
+      color: #444;
+      font-size: 1rem;
+    }
+    
+    .info-box {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 28px;
+      margin: 25px 0;
+    }
+    
+    .info-box h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #0c4a6e;
+      margin-bottom: 15px;
+    }
+    
+    .info-box p {
+      font-size: 0.95rem;
+      color: #0e7490;
+      margin-bottom: 12px;
+    }
+    
+    .info-box p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .info-box strong {
+      color: #0c4a6e;
+    }
+    
+    .steps-list {
+      list-style: none;
+      margin: 25px 0;
+    }
+    
+    .steps-list li {
+      padding: 18px 0;
+      padding-left: 45px;
+      position: relative;
+      color: #555;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .steps-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .steps-list li .step-num {
+      position: absolute;
+      left: 0;
+      top: 18px;
+      font-family: 'Inter', sans-serif;
+      width: 28px;
+      height: 28px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    
+    .steps-list li strong {
+      color: #1a1a1a;
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+    
+    .plan-details {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 25px;
+      margin: 25px 0;
+    }
+    
+    .plan-details h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 15px;
+    }
+    
+    .plan-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    .plan-item {
+      padding: 15px;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+    }
+    
+    .plan-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 8px;
+    }
+    
+    .plan-item p {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0;
+    }
+    
+    .referral-box {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      padding: 28px;
+      margin: 25px 0;
+    }
+    
+    .referral-box h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #92400e;
+      margin-bottom: 12px;
+    }
+    
+    .referral-box p {
+      font-size: 0.95rem;
+      color: #78350f;
+      margin-bottom: 12px;
+    }
+    
+    .referral-box p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .referral-box strong {
+      color: #92400e;
+    }
+    
+    .questions-box {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 22px 25px;
+      margin: 20px 0;
+    }
+    
+    .questions-box p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+    
+    .questions-box a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    
+    .questions-box a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer {
+      padding: 30px 50px;
+      border-top: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+    }
+    
+    .footer-left {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #888;
+    }
+    
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #888;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: #2563eb;
+    }
+
+    @media (max-width: 700px) {
+      .nav {
+        padding: 15px 25px;
+      }
+      
+      .nav-links {
+        gap: 15px;
+      }
+      
+      .nav-links a:not(:last-child) {
+        display: none;
+      }
+      
+      .section {
+        padding: 35px 25px;
+      }
+      
+      .hero {
+        padding: 45px 25px;
+      }
+      
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      
+      .plan-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Cornelius Mota</a>
+    <div class="nav-links">
+      <a href="diagnostic.html">Diagnostic</a>
+      <a href="advisory.html">Advisory</a>
+      <a href="https://www.linkedin.com/in/corneliusmota/" target="_blank">LinkedIn</a>
+    </div>
+  </nav>
+  
+  <div class="page-container">
+    
+    <section class="section hero">
+      <div class="hero-icon">✓</div>
+      <div class="hero-eyebrow">Subscription Confirmed</div>
+      <h1>You're in. Let's keep the momentum going.</h1>
+      <p class="hero-sub">Your Async Advisory subscription is now active. Here's how to get started.</p>
+    </section>
+    
+    <section class="section">
+      <div class="info-box">
+        <h3>What happens next</h3>
+        <p><strong>Within 24 hours</strong>, you'll receive a welcome email from me with:</p>
+        <p>→ The email address to send your questions to</p>
+        <p>→ Guidelines for getting the best answers</p>
+        <p>→ A quick recap of your plan details</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="section-label">How It Works</div>
+      <h2>Submitting questions</h2>
+      
+      <ul class="steps-list">
+        <li>
+          <span class="step-num">1</span>
+          <strong>Email me your question</strong>
+          Use the dedicated email address I'll send in your welcome message. One topic per email keeps things clear.
+        </li>
+        <li>
+          <span class="step-num">2</span>
+          <strong>I respond within 24-48 hours</strong>
+          Depending on your plan. Thoughtful, specific answers—not one-liners.
+        </li>
+        <li>
+          <span class="step-num">3</span>
+          <strong>You implement with confidence</strong>
+          No more second-guessing. If my answer sparks a follow-up, just reply.
+        </li>
+      </ul>
+    </section>
+    
+    <section class="section">
+      <div class="plan-details">
+        <h3>Your plan at a glance</h3>
+        <div class="plan-grid">
+          <div class="plan-item">
+            <h4>Lite ($297/mo)</h4>
+            <p>Up to 3 questions/week</p>
+            <p>48-hour response time</p>
+          </div>
+          <div class="plan-item">
+            <h4>Full ($497/mo)</h4>
+            <p>Up to 1 question/business day</p>
+            <p>24-hour response time</p>
+          </div>
+        </div>
+      </div>
+      <p>Check your Stripe receipt to confirm which plan you're on. If you need to upgrade or change anything, just reply to your welcome email.</p>
+    </section>
+    
+    <section class="section">
+      <div class="referral-box">
+        <h3>Know someone who needs this?</h3>
+        <p>If you have a friend or colleague who's struggling with their positioning, send them my way.</p>
+        <p><strong>When they complete a Diagnostic, you get one month of Async Advisory free.</strong></p>
+        <p>No forms, no codes. Just have them mention your name when they purchase, or email me with their name after they buy.</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="questions-box">
+        <p><strong>Questions before your welcome email arrives?</strong> <a href="https://www.linkedin.com/in/corneliusmota/" target="_blank">Message me on LinkedIn</a>.</p>
+      </div>
+    </section>
+    
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-left">© 2026 Cornelius Mota</div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </footer>
+  
+</body>
+</html>
